@@ -12,6 +12,12 @@ For the program to run you only need pure Perl.
 
 # Notes:
 
+to run the program, open a console window and type:
+
+perl get_food.pl
+
+Remember to hit enter :)
+
 My intention was to keep it simple and documented.
 
 June 09 2024
