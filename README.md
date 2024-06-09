@@ -1,6 +1,6 @@
 # Code challenge for Agile Engine
 
-# What this Perl program does?.
+# What does this Perl program do?.
 
 - Asks for an input filename and for a word to search in the file.
 - It checks if the file exists, if so, it searches the word inside the file.
