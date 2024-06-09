@@ -12,7 +12,8 @@ For the program to run you only need pure Perl.
 
 # Notes:
 
-to run the program, open a console window and type:
+to run the program, download both files to the same directory,
+the csv and .pl, open a console window and type:
 
 perl get_food.pl
 
