@@ -21,7 +21,7 @@ exit if ($file_name eq "Q");
 
 $continue_loop = "0";
 while(!$continue_loop){
-  print "Food to search or Q to quit(It is asking for food, but it will search all line):";
+  print "Enter a food to search, or Q to quit. (It will search the entire line for the food name.):";
   $food = <>;
   $food =~ s/\n//g;
   $continue_loop = "exit" if (length($food) > 3 || $food eq "Q");
