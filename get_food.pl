@@ -21,8 +21,8 @@ exit if ($file_name eq "Q");
 
 $continue_loop = "0";
 while(!$continue_loop){
-  print "Food to search or Q to quit:";
-  my $food = <>;
+  print "Food to search or Q to quit(It is asking for food, but it will search all line):";
+  $food = <>;
   $food =~ s/\n//g;
   $continue_loop = "exit" if (length($food) > 3 || $food eq "Q");
 }
@@ -30,19 +30,25 @@ while(!$continue_loop){
 exit if ($food eq "Q");
 
 if( open (food_file, $file_name)) {
-  my @food_file=<food_file>;
+  @food_file=<food_file>;
   close (food_file);
 } else {
   print "File not found.\n";
   exit;
 }
 
+# One way to do it
+#foreach(@food_file) {
+#  if( $_ =~ /$food/ ) {
+#    print "Food found:$food \n";
+#    print $_;
+#  }
+#}
 
-foreach(@food_file) {
-  print "Food found:\n";
-  print $_ if $_ =~ /$food/;
+# Shorter.
+foreach(@food_file) { 
+  print "Food found:$food \n $_" if $_ =~ /$food/; 
 }
-
 
 
 
